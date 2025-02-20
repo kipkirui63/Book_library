@@ -1,0 +1,9 @@
+one:
+  user: one
+  book: one
+  due_date: <%= 7.days.from_now.to_date %>
+
+two:
+  user: two
+  book: two
+  due_date: <%= 10.days.from_now.to_date %>

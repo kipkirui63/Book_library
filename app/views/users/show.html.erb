@@ -1,0 +1,30 @@
+<h1 class="text-3xl font-bold mb-4">My Borrowed Books</h1>
+
+<% if @borrowed_books.any? %>
+  <table class="w-full mt-4 border-collapse border border-gray-300">
+    <thead>
+      <tr class="bg-gray-200">
+        <th class="border p-2">Title</th>
+        <th class="border p-2">Author</th>
+        <th class="border p-2">ISBN</th>
+        <th class="border p-2">Due Date</th>
+        <th class="border p-2">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @borrowed_books.each do |borrowing| %>
+        <tr class="border">
+          <td class="p-2"><%= borrowing.book.title %></td>
+          <td class="p-2"><%= borrowing.book.author %></td>
+          <td class="p-2"><%= borrowing.book.isbn %></td>
+          <td class="p-2"><%= borrowing.due_date.strftime("%B %d, %Y") %></td>
+          <td class="p-2">
+            <%= button_to "Return", return_book_path(borrowing.book), method: :patch, class: "bg-red-500 text-white px-3 py-1 rounded" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p class="text-gray-500">You haven't borrowed any books yet.</p>
+<% end %>
