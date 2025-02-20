@@ -1,28 +1,73 @@
-<<<<<<< HEAD
-# Book_library
-=======
-# README
+# 📚 Book Library
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple book borrowing and management system built with **Ruby on Rails**.
 
-Things you may want to cover:
+## 🚀 Features
+- User authentication (Devise)
+- Add new books
+- Borrow and return books
+- User profile with borrowed books
+- Responsive UI with Tailwind CSS
 
-* Ruby version
+## 🛠️ Technologies Used
+- **Backend:** Ruby on Rails
+- **Frontend:** ERB + Tailwind CSS
+- **Database:** PostgreSQL
+- **Authentication:** Devise
+- **Deployment:** Docker, Kamal
 
-* System dependencies
+## 📦 Installation & Setup
 
-* Configuration
+### Prerequisites
+Make sure you have the following installed:
+- **Ruby**
+- **Rails** (
+- **PostgreSQL**
+- **Bundler**
+- **Docker (optional for deployment)**
 
-* Database creation
+### Clone the Repository
+```sh
+git clone git@github.com:kipkirui63/Book_library.git
+cd Book_library
+```
 
-* Database initialization
+### Install Dependencies
+```sh
+bundle install
+```
 
-* How to run the test suite
+### Set Up the Database
+```sh
+rails db:create db:migrate db:seed
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### Start the Server
+```sh
+rails server
+```
+Visit `http://localhost:3000` to view the app.
 
-* Deployment instructions
+## 📖 Usage
+- Sign up or log in
+- Browse available books
+- Click **"Borrow"** to borrow a book
+- View borrowed books in your profile
+- Return books when done
 
-* ...
->>>>>>> a9aa0a7 (Rails set up)
+## 🐳 Docker Setup (Optional)
+```sh
+docker-compose up --build
+```
+
+## 🏗️ Deployment with Kamal
+```sh
+kamal deploy
+```
+
+## 🔥 Contributing
+Feel free to submit issues and pull requests.
+
+## 📜 License
+MIT License. See [LICENSE](LICENSE) for details.
+
